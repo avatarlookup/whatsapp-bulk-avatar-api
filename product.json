@@ -42,47 +42,47 @@
     {
       "name": "number",
       "example": "17253100591",
-      "description": ""
+      "description": "The submitted number."
     },
     {
       "name": "activated",
       "example": "yes",
-      "description": ""
+      "description": "Whether the number is registered on WhatsApp."
     },
     {
       "name": "avatar",
       "example": "https://pps.waavatar.xyz/v/example.jpg",
-      "description": ""
+      "description": "Avatar URL."
     },
     {
       "name": "category",
       "example": "individual portrait",
-      "description": ""
+      "description": "Avatar category, e.g. individual portrait."
     },
     {
       "name": "gender",
       "example": "male",
-      "description": ""
+      "description": "Gender estimated from the avatar."
     },
     {
       "name": "age",
       "example": "55",
-      "description": ""
+      "description": "Age band estimated from the avatar."
     },
     {
       "name": "skin_color",
       "example": "white",
-      "description": ""
+      "description": "Skin tone estimated from the avatar."
     },
     {
       "name": "hair_color",
       "example": "gray white",
-      "description": ""
+      "description": "Hair colour estimated from the avatar."
     },
     {
       "name": "isb",
       "example": "2",
-      "description": ""
+      "description": "Business account flag."
     }
   ],
   "statuses": [

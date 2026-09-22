@@ -20,15 +20,15 @@ This is the official AvatarLookup example repository for **one** bulk product, `
 
 | Column | Example | Meaning |
 |---|---|---|
-| `number` | `17253100591` |  |
-| `activated` | `yes` |  |
-| `avatar` | `https://pps.waavatar.xyz/v/example.jpg` |  |
-| `category` | `individual portrait` |  |
-| `gender` | `male` |  |
-| `age` | `55` |  |
-| `skin_color` | `white` |  |
-| `hair_color` | `gray white` |  |
-| `isb` | `2` |  |
+| `number` | `17253100591` | The submitted number. |
+| `activated` | `yes` | Whether the number is registered on WhatsApp. |
+| `avatar` | `https://pps.waavatar.xyz/v/example.jpg` | Avatar URL. |
+| `category` | `individual portrait` | Avatar category, e.g. individual portrait. |
+| `gender` | `male` | Gender estimated from the avatar. |
+| `age` | `55` | Age band estimated from the avatar. |
+| `skin_color` | `white` | Skin tone estimated from the avatar. |
+| `hair_color` | `gray white` | Hair colour estimated from the avatar. |
+| `isb` | `2` | Business account flag. |
 
 The result is a **point-in-time signal**, not a verdict, and not identity data. It describes what the provider reported at the moment the task ran.
 
