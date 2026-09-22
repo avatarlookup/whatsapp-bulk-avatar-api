@@ -1,0 +1,97 @@
+{
+  "name": "WhatsApp Bulk Avatar Analysis",
+  "brand": "AvatarLookup",
+  "repository": "avatarlookup/whatsapp-bulk-avatar-api",
+  "description": "Upload a whole file of numbers and download the WhatsApp avatar data when the task finishes.",
+  "official_site": "https://avatarlookup.com",
+  "landing_page": "https://avatarlookup.com/products/ws_profile_batch",
+  "canonical_docs": "https://avatarlookup.com/api-docs",
+  "base_url": "https://avatarlookup.com",
+  "auth": {
+    "type": "api_key",
+    "header": "X-API-Key"
+  },
+  "mode": "async-bulk",
+  "product": "ws_profile_batch",
+  "identifier_kind": "phone",
+  "requires_country": true,
+  "endpoints": {
+    "submit": {
+      "method": "POST",
+      "path": "/api/v1/bulk-tasks"
+    },
+    "status": {
+      "method": "GET",
+      "path": "/api/v1/bulk-tasks/{id}"
+    },
+    "balance": {
+      "method": "GET",
+      "path": "/api/v1/balance"
+    }
+  },
+  "limits": {
+    "min_items": 1000,
+    "max_items": 100000,
+    "poll_interval_seconds": 30,
+    "file_formats": [
+      "txt",
+      "csv"
+    ]
+  },
+  "result_fields": [
+    {
+      "name": "number",
+      "example": "17253100591",
+      "description": ""
+    },
+    {
+      "name": "activated",
+      "example": "yes",
+      "description": ""
+    },
+    {
+      "name": "avatar",
+      "example": "https://pps.waavatar.xyz/v/example.jpg",
+      "description": ""
+    },
+    {
+      "name": "category",
+      "example": "individual portrait",
+      "description": ""
+    },
+    {
+      "name": "gender",
+      "example": "male",
+      "description": ""
+    },
+    {
+      "name": "age",
+      "example": "55",
+      "description": ""
+    },
+    {
+      "name": "skin_color",
+      "example": "white",
+      "description": ""
+    },
+    {
+      "name": "hair_color",
+      "example": "gray white",
+      "description": ""
+    },
+    {
+      "name": "isb",
+      "example": "2",
+      "description": ""
+    }
+  ],
+  "statuses": [
+    "processing",
+    "success",
+    "failed"
+  ],
+  "pricing_url": "https://avatarlookup.com/pricing",
+  "maintainer": "AvatarLookup",
+  "license": "MIT",
+  "last_reviewed": "2026-09-22"
+}
