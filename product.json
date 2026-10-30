@@ -1,5 +1,5 @@
 {
-  "name": "WhatsApp Bulk Avatar Analysis",
+  "name": "WhatsApp bulk avatar lookup",
   "brand": "AvatarLookup",
   "repository": "avatarlookup/whatsapp-bulk-avatar-api",
   "description": "Upload a whole file of numbers and download the WhatsApp avatar data when the task finishes.",
@@ -31,7 +31,7 @@
   },
   "limits": {
     "min_items": 1000,
-    "max_items": 100000,
+    "max_items": 500000,
     "poll_interval_seconds": 30,
     "file_formats": [
       "txt",
@@ -40,49 +40,44 @@
   },
   "result_fields": [
     {
-      "name": "number",
-      "example": "17253100591",
-      "description": "The submitted number."
+      "name": "identifier",
+      "example": "12345678900",
+      "description": "Submitted identifier, used to join the result to the input. Phone identifiers include their country code."
     },
     {
       "name": "activated",
-      "example": "yes",
-      "description": "Whether the number is registered on WhatsApp."
+      "example": "true",
+      "description": "The determined positive/negative signal for this product; interpret it in the product context."
     },
     {
-      "name": "avatar",
+      "name": "avatar_url",
       "example": "https://pps.waavatar.xyz/v/example.jpg",
-      "description": "Avatar URL."
+      "description": "Public avatar URL when available; an empty value does not reveal a private image."
     },
     {
       "name": "category",
       "example": "individual portrait",
-      "description": "Avatar category, e.g. individual portrait."
+      "description": "Image category estimated from the avatar."
+    },
+    {
+      "name": "age",
+      "example": "31",
+      "description": "Age estimated from the avatar, not a verified personal fact."
     },
     {
       "name": "gender",
       "example": "male",
-      "description": "Gender estimated from the avatar."
-    },
-    {
-      "name": "age",
-      "example": "55",
-      "description": "Age band estimated from the avatar."
+      "description": "Gender presentation estimated from the avatar."
     },
     {
       "name": "skin_color",
-      "example": "white",
-      "description": "Skin tone estimated from the avatar."
+      "example": "east_asian",
+      "description": "Skin-tone estimate derived from the avatar."
     },
     {
       "name": "hair_color",
-      "example": "gray white",
-      "description": "Hair colour estimated from the avatar."
-    },
-    {
-      "name": "isb",
-      "example": "2",
-      "description": "Business account flag."
+      "example": "black",
+      "description": "Hair-colour estimate derived from the avatar."
     }
   ],
   "statuses": [
@@ -93,5 +88,5 @@
   "pricing_url": "https://avatarlookup.com/pricing",
   "maintainer": "AvatarLookup",
   "license": "MIT",
-  "last_reviewed": "2026-09-22"
+  "last_reviewed": "2026-10-30"
 }
